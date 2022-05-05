@@ -2,9 +2,9 @@
 import pygame
 pygame.init()
 
-#Classify the base class that the 4 types of different regular monster classes will derive from.
+#Classify the Monster Class.
 class Monster(pygame.sprite.Sprite):
-    #Initialize the attributes that will be included in all of the regular derived monster classes.
+    #Initialize the attributes that will be included in all of the regular monster objects.
     def __init__(self,monster_HP,player_damage,monster_EXP,neutral_state):
         self.monster_HP=monster_HP
         self.player_damage=player_damage
@@ -35,27 +35,10 @@ class Monster(pygame.sprite.Sprite):
         monster=pygame.image.load(self.neutral_state)
         monster=pygame.transform.smoothscale(monster,(175,175))
         return monster
-
-#Classify the 4 dervived regular monster classes that inherit the methods and class attributes from the base Monster Class.
-class Big_Feets(Monster):
-    def __init__(self,monster_HP,player_damage,monster_EXP,neutral_state):
-        return super().__init__(monster_HP,player_damage,monster_EXP,neutral_state)
-
-class Mouse(Monster):
-    def __init__(self,monster_HP,player_damage,monster_EXP,neutral_state):
-        return super().__init__(monster_HP,player_damage,monster_EXP,neutral_state)
-
-class Orc(Monster):
-    def __init__(self,monster_HP,player_damage,monster_EXP,neutral_state):
-        return super().__init__(monster_HP,player_damage,monster_EXP,neutral_state)
-
-class Sage_Shroom(Monster):
-    def __init__(self,monster_HP,player_damage,monster_EXP,neutral_state):
-        return super().__init__(monster_HP,player_damage,monster_EXP,neutral_state)
     
-#Classify the base class that the 4 types of different boss monster classes will derive from.
+#Classify the Boss_Monster Class
 class Boss_Monster(pygame.sprite.Sprite):
-    #Initialize the attributes that will be included in all of the boss monster derived classes.
+    #Initialize the attributes that will be included in all of the boss monster objects.
     def __init__(self,boss_HP,player_damage,name,boss_neutral_state):
         self.name=name
         self.boss_HP=boss_HP
@@ -79,20 +62,3 @@ class Boss_Monster(pygame.sprite.Sprite):
     #Call this method in the main program to retrieve the name of the selected boss monster
     def boss_name(self):
         return self.name
-
-#Classify the 4 dervived boss monster classes that inherit the methods and class attributes from the base Boss_Monster Class.
-class Dark_Wizard(Boss_Monster):
-     def __init__(self,boss_HP,player_damage,name,boss_neutral_state):
-         super().__init__(boss_HP,player_damage,name,boss_neutral_state)
-
-class Dread_Eye(Boss_Monster):
-     def __init__(self,boss_HP,player_damage,name,boss_neutral_state):
-         super().__init__(boss_HP,player_damage,name,boss_neutral_state)
-
-class Ultra_Bloop(Boss_Monster):
-     def __init__(self,boss_HP,player_damage,name,boss_neutral_state):
-         super().__init__(boss_HP,player_damage,name,boss_neutral_state)
-
-class Orc_Lord(Boss_Monster):
-     def __init__(self,boss_HP,player_damage,name,boss_neutral_state):
-         super().__init__(boss_HP,player_damage,name,boss_neutral_state)        
