@@ -109,18 +109,18 @@ final_stats_font_types=pygame.font.SysFont("comicsans",75)
 game_title_image=pygame.image.load("clicker_hero_title.png")
 
 #Types of regular monsters with assigned attributes that are all shared except for the image.
-big_feets=monsters.Big_Feets(monster_HP,base_player_damage,monster_EXP,"big_feets.png")
-mouse=monsters.Mouse(monster_HP,base_player_damage,monster_EXP,"mouse.png")
-orc=monsters.Orc(monster_HP,base_player_damage,monster_EXP,"orc.png")
-sage_shroom=monsters.Sage_Shroom(monster_HP,base_player_damage,monster_EXP,"sage_shroom.png")
+big_feets=monsters.Monster(monster_HP,base_player_damage,monster_EXP,"big_feets.png")
+mouse=monsters.Monster(monster_HP,base_player_damage,monster_EXP,"mouse.png")
+orc=monsters.Monster(monster_HP,base_player_damage,monster_EXP,"orc.png")
+sage_shroom=monsters.Monster(monster_HP,base_player_damage,monster_EXP,"sage_shroom.png")
 #Place all the different regular monster types into a tuple to be randomly selected later on.
 monster_types=(big_feets,mouse,orc,sage_shroom)
 
 #Types of boss monsters with shared player damage and different HP pools and images.
-dark_wizard=monsters.Dark_Wizard(4000,base_player_damage,"Dark Wizard","dark_wizard.png")
-dread_eye=monsters.Dread_Eye(10000,base_player_damage,"Dread Eye","dread_eye.png")
-ultra_bloop=monsters.Ultra_Bloop(20000,base_player_damage,"Ultra Bloop","ultra_bloop.png")
-orc_lord=monsters.Orc_Lord(1000,base_player_damage,"Orc Lord","orc_lord.png")
+dark_wizard=monsters.Boss_Monster(4000,base_player_damage,"Dark Wizard","dark_wizard.png")
+dread_eye=monsters.Boss_Monster(10000,base_player_damage,"Dread Eye","dread_eye.png")
+ultra_bloop=monsters.Boss_Monster(20000,base_player_damage,"Ultra Bloop","ultra_bloop.png")
+orc_lord=monsters.Boss_Monster(1000,base_player_damage,"Orc Lord","orc_lord.png")
 #Place all the different boss monster types into a tuple to so that player_damage is distributed across them all.
 boss_types=(dark_wizard,orc_lord,dread_eye,ultra_bloop)
 
